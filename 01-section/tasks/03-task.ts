@@ -1,6 +1,16 @@
 const city = "London";
 const country = "Great Britain";
-const region = 161;
+let region: any = 161;
+region = region.toString() as string;
+
+let isSameTypes = typeof city === typeof country;
+console.log(isSameTypes);
+
+isSameTypes = typeof city === typeof region;
+console.log(isSameTypes);
+console.log(region);
+
+
 
 // 1. Сравните типы переменных city и country,
 // результат сравнения запишите в переменную

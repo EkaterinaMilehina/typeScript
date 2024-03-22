@@ -13,4 +13,14 @@ interface IPlaceData {
   // тип PlaceAddressType, в котором будут
   // поля country, city, address. При этом
   // поля должны быть обязательны к заполнению.
-  
+  type PlaceAddressType = Required<Pick<IPlaceData, 'country' | 'city' | 'address'>>;
+
+  // Проверка 
+const place: PlaceAddressType = {
+  country: "gng",
+  city: "dvfd d",
+  address: "dbdzd",
+  // temperature: 25,
+  // time: new Date(),
+  // isCloudy: true
+};

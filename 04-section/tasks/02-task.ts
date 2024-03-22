@@ -8,19 +8,40 @@ enum paymentType {
     "credit"
   }
   
-  interface ICustomer {
-    firstName: string;
-    lastName: string;
-    dateBirthday: Date;
+  // interface ICustomer {
+  //   firstName: string;
+  //   lastName: string;
+  //   dateBirthday: Date;
+  //   deliveryCountry: string;
+  //   deliveryCity: string;
+  //   deliveryAddress: string;
+  //   deliveryBuilding: number | string;
+  //   deliveryApartment?: number;
+  //   detiveryTime?: string;
+  //   paymentType: paymentType;
+  //   ordersCount: number;
+  //   discountPercent: number;
+  //   currency: "EUR" | "USD" | "RUB";
+  // }
+  
+  interface IDeliveryInfo {
     deliveryCountry: string;
     deliveryCity: string;
     deliveryAddress: string;
     deliveryBuilding: number | string;
     deliveryApartment?: number;
-    detiveryTime?: string;
+    deliveryTime?: string;
+}
+
+interface IClient {
+    firstName: string;
+    lastName: string;
+    dateBirthday: Date;
+    deliveryInfo: IDeliveryInfo;
     paymentType: paymentType;
     ordersCount: number;
     discountPercent: number;
     currency: "EUR" | "USD" | "RUB";
-  }
-  
+}
+
+type ICust = IDeliveryInfo & IClient;

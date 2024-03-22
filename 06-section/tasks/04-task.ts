@@ -1,4 +1,4 @@
-function getPropertyValue(obj, key) {
+function getPropertyValue<Obj, Key extends keyof Obj>(obj: Obj, key: Key) {
     return obj[key];
   }
   
@@ -9,7 +9,7 @@ function getPropertyValue(obj, key) {
   // в том случае когда у объекта нет указанного
   // свойства (второй вызов).
   
-  const car = {
+  const Car = {
     brand: "Ford",
     model: "Mustang",
     yearOfIssue: 1967,
@@ -17,6 +17,6 @@ function getPropertyValue(obj, key) {
     hp: 115
   };
   
-  getPropertyValue(car, "brand");
-  getPropertyValue(car, "nickname");
+  getPropertyValue(Car, "brand");
+  // getPropertyValue(Car, "nickname");
   

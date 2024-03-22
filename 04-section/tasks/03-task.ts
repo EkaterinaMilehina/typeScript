@@ -3,10 +3,10 @@
 // один раз. А и ovnerName было опциональным
 
 interface ICar {
-    brand: string;
-    model: string;
+    readonly brand: string;
+    readonly model: string;
     hp: number;
     registrationNumber: string;
-    ownerName: string;
+    ownerName?: string;
   }
   

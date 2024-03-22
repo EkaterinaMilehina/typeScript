@@ -2,9 +2,13 @@
 // 2. Замени все unknown описанным типом
 // 3. Проверь работоспособность кода
 
-export type User = unknown;
+export type User = {
+  name: string;
+  age: number;
+  occupation: string;
+};
 
-export const users: unknown[] = [
+export const users: User[] = [
   {
     name: "Антон",
     age: 25,
@@ -17,7 +21,7 @@ export const users: unknown[] = [
   }
 ];
 
-export function logPerson(user: unknown) {
+export function logPerson(user: User) {
   console.log(` - ${user.name}, ${user.age}`);
 }
 

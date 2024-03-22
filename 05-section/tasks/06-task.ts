@@ -5,8 +5,11 @@ interface IPerson {
     readonly hometown: string;
     isMarried: boolean;
   }
-  
-  const somePerson: IPerson = {
+  type Mutable<T> = {
+    -readonly [P in keyof T]: T[P];
+};
+
+const somePerson: Mutable<IPerson> = {
     firstName: "Антон",
     lastName: "Иванов",
     age: 33,
