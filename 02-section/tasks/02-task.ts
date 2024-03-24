@@ -1,6 +1,6 @@
 const ages: (string | number)[] = [];
 const answers: (boolean | string | number)[] = [];
-const data: (boolean | string | number | object | undefined)[] = [];
+const data: (boolean | string | number | object)[] = [];
 
 // Определите в явном виде типы массивов таким
 // образом, чтобы код ниже работал корректно
@@ -20,10 +20,7 @@ answers.push(`${answers[1]}`.charAt(0));
 answers.push("2" + 567);
 
 data.push(Math.random());
-data.push(answers[2]);
-if (typeof ages[0] === 'number') {
-    data.push(+ages[0] - 11);
-}
-
+data.push(answers[2]!);
+data.push(+ages[0]! - 11);
 data.push({ name: "Антон", age: 22, city: "Воронеж", hasCar: true });
 data.push(false);
