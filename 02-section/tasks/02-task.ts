@@ -14,6 +14,7 @@ ages.push(100);
 
 answers.push(17);
 answers.push("Typescript");
+
 answers.push("Результат");
 answers.push(77 > 66);
 answers.push(`${answers[1]}`.charAt(0));
@@ -24,3 +25,7 @@ data.push(answers[2]!);
 data.push(+ages[0]! - 11);
 data.push({ name: "Антон", age: 22, city: "Воронеж", hasCar: true });
 data.push(false);
+
+console.log(ages);
+console.log(answers);
+console.log(data);

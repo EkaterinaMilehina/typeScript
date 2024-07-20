@@ -8,7 +8,7 @@
 // соответствующее лично вам
 // 4. Выведите данные в консоль
 
-const firstname: string = 'Katya';
+const firstname: string | number= 'Katya';
 const lastname: string = 'Milekhina';
 const gender: string = 'female';
 const age: number = 23;
@@ -26,7 +26,7 @@ console.log(postcode);
 console.log(familyStatus);
 console.log(pets);
 
-
+const a = typeof [] === ''
 
 
 

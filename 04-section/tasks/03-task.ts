@@ -10,3 +10,11 @@ interface ICar {
     ownerName?: string;
   }
   
+const av:ICar  = {
+  brand: 'bookl',
+  model: 'vg',
+  hp: 325
+}
+
+av.hp = 233;
+av.model = 'fvfv';

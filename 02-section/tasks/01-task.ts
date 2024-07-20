@@ -27,6 +27,6 @@ hasCar.push(true);
 // 6. Создайте кортеж массивов, перенесите данные
 // о ваши друзьях в него
 
-const friendsData: (string | number | boolean)[] = [...friends, ...year, ...hasCar];
+const friendsData: [string[], number[], boolean[]] = [friends, year, hasCar];
 console.log(friendsData);
 

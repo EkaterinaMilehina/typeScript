@@ -2,26 +2,27 @@
 // 2. Замени все unknown описанным типом
 // 3. Проверь работоспособность кода
 
-export type User = {
+type User = {
   name: string;
   age: number;
   occupation: string;
 };
 
-export const users: User[] = [
-  {
-    name: "Антон",
-    age: 25,
-    occupation: "Водитель"
-  },
-  {
-    name: "Амир",
-    age: 23,
-    occupation: "Программист"
-  }
+const users: User[] = [
+  
 ];
+users.push({
+  name: "Антон",
+  age: 25,
+  occupation: "Водитель"
+},
+{
+  name: "Амир",
+  age: 23,
+  occupation: "Программист"
+})
 
-export function logPerson(user: User) {
+function logPerson(user: User) {
   console.log(` - ${user.name}, ${user.age}`);
 }
 

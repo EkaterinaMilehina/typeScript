@@ -1,14 +1,14 @@
 const city = "London";
 const country = "Great Britain";
-let region: any = 161;
-region = region.toString() as string;
+const region: number = 161;
 
 let isSameTypes = typeof city === typeof country;
 console.log(isSameTypes);
 
-isSameTypes = typeof city === typeof region;
+isSameTypes = typeof city === typeof `${region}`;
 console.log(isSameTypes);
 console.log(region);
+
 
 
 

@@ -1,7 +1,7 @@
 // 1. Ниже приведен список переменных из
 // первого урока. На их основе создайте
 // интерфейс IUser.
-interface IUser {
+interface IUsers {
     firstName: string;
     lastName: string;
     sex: string;
@@ -15,7 +15,7 @@ interface IUser {
 // 2. Не меняя написанный вами интерфейс
 // IUser, добавьте в него опциональную
 // переменную hasCar
-interface IUser {
+interface IUsers {
     hasCar?: boolean;
 }
 // 3. Создайте новый интерфейс ICustomer,
@@ -23,8 +23,19 @@ interface IUser {
 // ICustomer также должен содержать поля с
 // количеством заказов, а также со способом оплаты
 // (cash, card или credit)
-interface ICustomer extends IUser {
-    cash: number;
-    card: number;
-    credit: number;
+interface ICustomers extends IUsers {
+    ordersCount: number;
+    payment: 'cash' | 'card' | 'credit';
+}
+
+const af: ICustomers = {
+    firstName: 'string',
+    lastName: 'string',
+    sex: 'string',
+    age: 5,
+    hometown: 'string',
+    isMarried: true,
+    hasPets: false,
+    ordersCount: 5,
+    payment: 'card'
 }

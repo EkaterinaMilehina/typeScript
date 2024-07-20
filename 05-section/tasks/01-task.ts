@@ -12,7 +12,8 @@ interface ITruck {
   // Проверка типа ICars
 const car: ICars = {
   brand: 'Toyota',
-  model: 'Corolla'
+  model: 'Corolla',
+  hasTrailer: true;
 };
 
 console.log(car.brand);

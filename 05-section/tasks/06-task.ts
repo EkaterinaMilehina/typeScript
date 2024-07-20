@@ -5,6 +5,8 @@ interface IPerson {
     readonly hometown: string;
     isMarried: boolean;
   }
+
+  
   type Mutable<T> = {
     -readonly [P in keyof T]: T[P];
 };

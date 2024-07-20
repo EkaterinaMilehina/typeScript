@@ -1,6 +1,6 @@
 // 1. Типизируйте функцию calc
 
-function calc(action: string, a: number, b: number): number {
+function calc(action: 'summ' | 'subtraction' | 'multiplication' | 'division', a: number, b: number): number {
   switch (action) {
     case "summ":
       return a + b;
@@ -15,12 +15,13 @@ function calc(action: string, a: number, b: number): number {
       return a + b;
   }
 }
+console.log(calc('summ', 5, 7));
 
 // 2. Напишите функцию calc2. Данная функция
 // должна быть аналогична функции calc,
 // но с использованием enum для action
 enum Action {
-  Summ = "summ",
+  Summ = 'summ',
   Subtraction = "subtraction",
   Multiplication = "multiplication",
   Division = "division"
@@ -41,4 +42,5 @@ function calc2(action: Action, a: number, b: number): number {
       return a + b;
   }
 }
+console.log(calc2(Action.Summ, 5, 6));
 

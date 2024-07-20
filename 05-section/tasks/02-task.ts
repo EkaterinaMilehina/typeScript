@@ -24,6 +24,8 @@ interface IRoom {
   // исключением тех, которые есть в IRoom
   type KitchenDataType = Omit<IKitchen, keyof IRoom>;
 
+
+  
   // Проверка типа KitchenDataType
 const kitchenData: KitchenDataType = {
   // width: 10,

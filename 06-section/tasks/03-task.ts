@@ -9,3 +9,6 @@ function getLength<T extends Num>(arg: T): number {
     return arg.length;
   }
   
+getLength('123')
+getLength([])
+getLength(11)
